@@ -1,12 +1,14 @@
-<div id="<%= dom_id list %>">
-  <p>
-    <strong>Description:</strong>
+<tr id="<%= dom_id list %>">
+  <td>
     <%= list.description %>
-  </p>
+  </td>
 
-  <p>
-    <strong>Completed:</strong>
+  <td>
     <%= list.completed %>
-  </p>
+  </td>
 
-</div>
+  <td>   
+    <%= link_to "Show this list", list %>
+  </td>
+
+</tr>

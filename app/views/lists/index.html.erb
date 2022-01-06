@@ -1,14 +1,25 @@
 <p style="color: green"><%= notice %></p>
+ 
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Completed</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    
+      <% @lists.each do |list| %>
+        <%= render list %>
+      <% end %>
+     
+  </tbody>
 
-<h1>Lists</h1>
 
-<div id="lists">
-  <% @lists.each do |list| %>
-    <%= render list %>
-    <p>
-      <%= link_to "Show this list", list %>
-    </p>
-  <% end %>
-</div>
+</table>
+
+
 
 <%= link_to "New list", new_list_path %>
