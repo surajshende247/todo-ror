@@ -11,8 +11,32 @@
   <tbody>
   
     
-      <% @lists.each do |list| %>
-        <%= render list %>
+      <% @lists.each do |list| %>       
+        
+        <% if list.completed %>
+
+        <tr class="table-secondary">
+          <td>
+            <%= list.description %>
+          </td>
+          <td>   
+            <%= link_to "Show this list", list %>
+          </td>
+        </tr>
+
+        <% else %>
+
+        <tr class="table-secondary">
+        <td>
+          <%= list.description %>
+        </td>
+        <td>   
+          <%= link_to "Show this list", list %>
+        </td>
+      </tr>
+
+        <% end %>
+
       <% end %>
      
   </tbody>
